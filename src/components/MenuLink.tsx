@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { match } from "path-to-regexp";
 
 interface MenuLinkProps {
   title: string;
@@ -11,7 +12,7 @@ interface MenuLinkProps {
 export default function MenuLink({ title, href }: MenuLinkProps) {
   const pathname = usePathname();
 
-  const isActive = pathname === href;
+  const isActive = !!match(href)(pathname);
 
   return (
     <Link href={href} className={isActive ? "text-white" : "text-white/50"}>
