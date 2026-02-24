@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Twitter NextJS",
+  title: {
+    template: "%s - Twitter NextJS",
+    default: "",
+  },
   description: "Learn NextJS creating Twitter copy",
 };
 

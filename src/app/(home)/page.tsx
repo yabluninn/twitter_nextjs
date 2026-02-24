@@ -1,3 +1,4 @@
+import { TWEETS } from "@/src/shared/data/tweets.data";
 import Tweet from "./Tweet";
 
 export default function Home() {
@@ -5,12 +6,11 @@ export default function Home() {
     <div className="min-h-screen flex justify-center px-4 py-8">
       <div className="w-full max-w-xl">
         <h1 className="text-3xl font-bold mb-6">Home</h1>
-        <Tweet
-          tweet={{
-            text: "Random Tweet",
-            author: "yablunin",
-          }}
-        />
+        <div className="space-y-6">
+          {TWEETS.map((item) => (
+            <Tweet key={item.author} tweet={item} />
+          ))}
+        </div>
       </div>
     </div>
   );
