@@ -7,7 +7,7 @@ export default function Header() {
       <Link href="/" className="flex items-center gap-3">
         <Image src="/x-logo.svg" alt="X Logo" width={28} height={28} priority />
       </Link>
-      <nav className="flex gap-6 text-sm text-white/80">
+      <nav className="flex gap-6 text-white/80">
         <Link href="/">Home</Link>
         <Link href="/">Explore</Link>
         <Link href="/">Profile</Link>
