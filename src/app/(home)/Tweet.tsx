@@ -1,13 +1,14 @@
-import { ITweet } from "@/src/shared/types/tweet.interface";
+import type { ITweet } from "@/src/shared/types/tweet.interface";
 
 interface Props {
   tweet: ITweet;
 }
 
-export default function Tweet({}: Props) {
+export default function Tweet({ tweet }: Props) {
   return (
     <div>
-      <div></div>
+      <p>{tweet.text}</p>
+      <span>@{tweet.author}</span>
     </div>
   );
 }
