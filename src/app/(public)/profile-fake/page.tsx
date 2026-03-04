@@ -5,5 +5,9 @@ export const metadata: Metadata = {
 };
 
 export default function ProfileFake() {
-  return <div>Profile Fake</div>;
+  return (
+    <div>
+      <h1 className="text-3xl font-bold mb-6">Profile Fake</h1>
+    </div>
+  );
 }
